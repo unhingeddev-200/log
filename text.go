@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	separator       = "="
+	separator       = ":"
 	indentSeparator = "  │ "
 )
 
