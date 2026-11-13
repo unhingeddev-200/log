@@ -13,7 +13,12 @@ import (
 var (
 	separator       = ":"
 	indentSeparator = "  │ "
+	pairSeparator   = "  "
 )
+
+func (l *Logger) SetPairSeparator(txt string) {
+	pairSeparator = txt
+}
 
 func (l *Logger) SetSeparator(txt string) {
 	separator = txt
@@ -168,7 +173,7 @@ func init() {
 
 func writeSpace(w io.Writer, first bool) {
 	if !first {
-		_, _ = w.Write([]byte{' '})
+		_, _ = w.Write([]byte(pairSeparator))
 	}
 }
 
