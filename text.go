@@ -15,11 +15,11 @@ var (
 	indentSeparator = "  │ "
 )
 
-func SetSeparator(txt string) {
+func (l *Logger) SetSeparator(txt string) {
 	separator = txt
 }
 
-func SetIndentSeparator(txt string) {
+func (l *Logger) SetIndentSeparator(txt string) {
 	indentSeparator = txt
 }
 
