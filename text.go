@@ -10,10 +10,18 @@ import (
 	"unicode/utf8"
 )
 
-const (
+var (
 	separator       = ":"
 	indentSeparator = "  │ "
 )
+
+func SetSeparator(txt string) {
+	separator = txt
+}
+
+func SetIndentSeparator(txt string) {
+	indentSeparator = txt
+}
 
 func (l *Logger) writeIndent(w io.Writer, str string, indent string, newline bool, key string) {
 	st := l.styles
