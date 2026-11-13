@@ -1,4 +1,4 @@
-module charm.land/log/v2
+module github.com/unhingeddev-200/log
 
 go 1.25.8
 
